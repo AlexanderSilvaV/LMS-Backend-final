@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: lms-backend-container
+    ports:
+      - "5253:80"
+    env_file:
+      - .env
+    restart: unless-stopped

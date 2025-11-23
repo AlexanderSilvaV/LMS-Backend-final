@@ -1,0 +1,43 @@
+@LMSBackend.API_HostAddress = http://localhost:5253
+
+GET {{LMSBackend.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+
+# Banco de Preguntas - Descargar Plantilla Excel
+GET {{LMSBackend.API_HostAddress}}/api/BancoPreguntas/plantilla-excel
+Accept: application/json
+
+###
+
+# Banco de Preguntas - Crear Pregunta Manual
+POST {{LMSBackend.API_HostAddress}}/api/BancoPreguntas
+Content-Type: application/json
+Authorization: Bearer YOUR_JWT_TOKEN_HERE
+
+{
+  "enunciado": "¿Cuál es la capital de Chile?",
+  "tipo": "SeleccionMultiple",
+  "puntaje": 1,
+  "evaluacionId": 1,
+  "opciones": [
+    {
+      "texto": "Santiago",
+      "esCorrecta": true,
+      "orden": 1
+    },
+    {
+      "texto": "Buenos Aires",
+      "esCorrecta": false,
+      "orden": 2
+    },
+    {
+      "texto": "Lima",
+      "esCorrecta": false,
+      "orden": 3
+    }
+  ]
+}
+
+###

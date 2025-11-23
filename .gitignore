@@ -1,0 +1,58 @@
+LMS
+**/bin/
+**/obj/
+*.user
+*.suo
+.vs/
+*.log
+
+# Environment variables (SECURITY: Never commit credentials)
+.env
+.env.local
+.env.*.local
+
+# AWS Credentials
+.aws/
+aws-credentials.json
+
+# Secrets
+secrets.json
+appsettings.*.json
+!appsettings.json
+!appsettings.Development.json
+
+# Logs
+*.log
+logs/
+*.log.*
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# Temporary files
+temp/
+tmp/
+*.tmp
+*.bak
+*.swp
+*~
+
+# IDE
+.vscode/
+.idea/
+*.suo
+*.user
+.vs/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Build artifacts
+**/bin/
+**/obj/
+**/out/
+dist/
+build/
